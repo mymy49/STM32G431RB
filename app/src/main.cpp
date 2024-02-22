@@ -43,6 +43,7 @@ int main(void)
 #if !defined(ST_CUBE_IDE)
 		debug_printf("%d\r", (uint32_t)runtime::getMsec());
 #endif 
+		usart2.send("Hello World!!\n\r", sizeof("Hello World!!\n\r"));
 		thread::yield();
 	}
 }
